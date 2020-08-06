@@ -1,0 +1,317 @@
+body {
+  font-family: "Lemonada", cursive;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.8rem;
+  position: relative;
+}
+header nav {
+  display: none;
+}
+header button {
+  display: none;
+}
+header div {
+  font-weight: bold;
+}
+header .nav-mobile {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-color: #717171;
+  width: 70vw;
+  text-align: center;
+  height: 50vh;
+  display: none;
+}
+header .nav-mobile a {
+  color: white;
+  text-decoration: none;
+  padding-bottom: 2rem;
+  display: block;
+}
+
+#hamburger {
+  cursor: pointer;
+}
+
+.main-section {
+  padding: 1rem 0.8rem;
+}
+.main-section img {
+  width: 100%;
+  border-radius: 50%;
+  height: 340px;
+}
+.main-section h1 {
+  font-size: 30px;
+  color: #242d52;
+  margin-bottom: 1rem;
+}
+.main-section p {
+  font-size: 25px;
+  margin-top: 0;
+  color: #242d52;
+}
+.main-section a {
+  margin-top: 3rem;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border: 2px solid rgba(0, 0, 0, 0.692);
+  text-transform: uppercase;
+  font-weight: bold;
+  color: grey;
+  border-radius: 50px;
+}
+.main-section a:hover {
+  background-color: chocolate;
+  transition: ease-in 1s;
+  color: white;
+}
+
+@media (min-width: 900px) {
+  header {
+    max-width: 1030px;
+    margin: 0 auto;
+    align-items: center;
+  }
+  header .main-header-list {
+    display: flex;
+  }
+  header #hamburger {
+    display: none;
+  }
+  header nav {
+    display: flex;
+  }
+  header nav a {
+    text-decoration: none;
+  }
+  header nav li {
+    list-style: none;
+    margin-right: 2rem;
+    color: #242d52;
+    font-weight: bold;
+  }
+
+  .main-section {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+  .main-section img {
+    width: 25%;
+    border-radius: 10px;
+    height: 400px;
+  }
+  .main-section h1 {
+    font-size: 40px;
+    margin-bottom: 1rem;
+  }
+  .main-section p {
+    font-size: 30px;
+    margin-top: 0;
+  }
+}
+.mySlides {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .prev, .next, .text {
+    font-size: 11px;
+  }
+}
+.about-me {
+  padding: 1rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem !important;
+}
+.about-me img {
+  width: 100%;
+}
+.about-me .first {
+  color: #242d52;
+  font-size: 15px;
+}
+.about-me .first h1 {
+  text-align: center;
+}
+
+.h1 {
+  font-size: 20px;
+}
+
+.projects {
+  padding: 1rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.projects a {
+  width: 100%;
+  color: #242d52;
+}
+
+.contact {
+  padding: 1rem 0.8rem;
+}
+.contact div {
+  margin-bottom: 3rem;
+}
+.contact .contact-img {
+  width: 100%;
+}
+.contact .mail {
+  margin-top: 2rem;
+  font-size: 14px;
+}
+
+@media (min-width: 900px) {
+  .about-me {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+  .about-me .first {
+    width: 50%;
+    color: #242d52;
+    font-size: 15px;
+  }
+  .about-me .first h1 {
+    text-align: left;
+  }
+  .about-me .pictures {
+    width: 32%;
+  }
+  .about-me .pictures img {
+    border-radius: 10px;
+  }
+
+  .projects {
+    max-width: 1050px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .projects a {
+    width: 40%;
+    font-size: 24px;
+  }
+
+  .h1 {
+    font-size: 25px;
+    margin: 2rem auto;
+  }
+
+  .contact {
+    max-width: 1050px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .contact .contact-img {
+    width: 32%;
+    border-radius: 10px;
+  }
+  .contact div {
+    font-size: 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
